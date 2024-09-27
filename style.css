@@ -3,19 +3,27 @@
     margin: 0;
     box-sizing: border-box;
   }
+
+  @font-face {
+    font-family: 'Minecraft';
+    src: url('fonts/Minecraft.ttf') format('truetype');
+}
+
   
   button {
       cursor: pointer;
   }
   
-  body {
-    font-family: 'Arial', sans-serif;
-    background: url('Minecraft_capa.png') no-repeat center center fixed;
+  body {    
+    font-family: 'Minecraft', sans-serif;
+    background: url('./image/Minecraft_capa.png') no-repeat center center fixed;
     background-size: cover;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #fff;
+    text-transform: uppercase;
 }
   
   .container {
@@ -47,6 +55,8 @@
       font-size: 24px;
       font-weight: bold;
       text-align: center;
+      color: #fff;
+      text-transform: uppercase;
   }
   
   .answers-container {
@@ -71,6 +81,8 @@
       padding: 0 32px;
       opacity: 0.7;
       transition: filter 0.2s;
+      color: #fff;
+      text-transform: uppercase;
   }
   
   .button:not(:disabled):hover { 

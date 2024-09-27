@@ -17,8 +17,11 @@ function startGame () {
 }
 
 function displayNextQuestion() {
-    while($answersContainer.firstChild) {
-        $answersContainer.removeChild($answersContainer.firstChild)
+   
+    resetState()
+    
+    if (currentQuestionIndex === questions.length) {
+        return finishGame ()
     }
 
     $questionText.textContent = questions[currentQuestionIndex].question
@@ -33,6 +36,27 @@ function displayNextQuestion() {
 
         newAnswer.addEventListener("click", selectAnswer)
     })
+}
+
+function resetState(){
+    while($answersContainer.firstChild) {
+        $answersContainer.removeChild($answersContainer.firstChild)
+    }
+
+    $nextQuestionButton.classList.add("hide")
+}
+
+function finishGame () {
+    $questionsContainer.innerHTML=
+    `
+        <h1 class = "final-message">
+        Quiz finalizado
+        </h1>
+        <h2 class = "final-message">Parabéns !</h2>
+        <button onclick=window.location.reload() class = "button">
+        Refazer quiz
+        </button>
+    `
 }
 
 function resetQuiz() {
