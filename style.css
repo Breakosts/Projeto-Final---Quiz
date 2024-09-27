@@ -9,20 +9,21 @@
   }
   
   body {
-      background-color: #121214;
-      color: #fff;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
+    font-family: 'Arial', sans-serif;
+    background: url('Minecraft_capa.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
   
   .container {
-      background-color: #a58134;
+      background-color: #399b8e;
       width: 90%;
       max-width: 800px;
-  
-      border: 2px solid #504411;
+      
+      border: 2px solid #0c6294;
       border-radius: 6px;
       padding: 16px;
       box-shadow: 0 0 2px 2px;
@@ -60,15 +61,15 @@
   }
   
   .button {
-      background-color: #196b42;
-      color: #fff;
+      background-color: #6cd83f;
+      color: #ffffff;
       font-size: 16px;
       font-weight: bold;
       border: 0;
       border-radius: 6px;
       height: 48px;
       padding: 0 32px;
-  
+      opacity: 0.7;
       transition: filter 0.2s;
   }
   
