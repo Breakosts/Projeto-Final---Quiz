@@ -77,6 +77,18 @@
       filter: brightness(0.8);
   }
 
+  .answers:disabled {
+    cursor: not-allowed;
+  }
+
   .hide {
     display: none;
   }
+
+.correct {
+    background-color: darkgreen;
+}
+
+.incorrect {
+    background-color: #a10101;
+}
