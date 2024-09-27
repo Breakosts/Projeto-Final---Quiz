@@ -2,10 +2,10 @@ const $startGameButton = document.querySelector (".start-quiz")
 const $quenstionsContainer = document.querySelector (".questions-container")
 const $answersContainer = document.querySelector(".answers-container")
 const $questionText = document.querySelector(".question")
-
+const $nextQuestionButton = document.querySelector(".next-Question")
 
 $startGameButton.addEventListener("click", startGame)
-
+$nextQuestionButton.addEventListener("click", displayNextQuestion)
 
 let currentQuestionIndex = 0
 
@@ -54,6 +54,9 @@ function selectAnswer(event) {
 
         button.disabled = true
     })
+
+    $nextQuestionButton.classList.remove("hide")
+    currentQuestionIndex++
 }
 
 
