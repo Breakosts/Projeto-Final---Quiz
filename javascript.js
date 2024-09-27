@@ -1,8 +1,8 @@
 const $startGameButton = document.querySelector (".start-quiz")
-const $quenstionsContainer = document.querySelector (".questions-container")
+const $questionsContainer = document.querySelector (".questions-container")
 const $answersContainer = document.querySelector(".answers-container")
 const $questionText = document.querySelector(".question")
-const $nextQuestionButton = document.querySelector(".next-Question")
+const $nextQuestionButton = document.querySelector(".next-question")
 
 $startGameButton.addEventListener("click", startGame)
 $nextQuestionButton.addEventListener("click", displayNextQuestion)
@@ -12,7 +12,7 @@ let currentQuestionIndex = 0
 
 function startGame () {
     $startGameButton.classList.add("hide")
-    $quenstionsContainer.classList.remove("hide")
+    $questionsContainer.classList.remove("hide")
     displayNextQuestion()
 }
 
@@ -38,7 +38,7 @@ function displayNextQuestion() {
 function resetQuiz() {
     currentQuestionIndex = 0;
     $startGameButton.classList.remove("hide");
-    $quenstionsContainer.classList.add("hide");
+    $questionsContainer.classList.add("hide");
 }
 
 
