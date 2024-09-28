@@ -7,6 +7,7 @@ const $usernameDisplay = document.querySelector(".user-name")
 
 $startGameButton.addEventListener("click", startGame)
 $nextQuestionButton.addEventListener("click", displayNextQuestion)
+$usernameDisplay.classList.add("hide")
 
 let currentQuestionIndex = 0
 let userName = ""
