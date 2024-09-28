@@ -3,14 +3,17 @@ const $questionsContainer = document.querySelector (".questions-container")
 const $answersContainer = document.querySelector(".answers-container")
 const $questionText = document.querySelector(".question")
 const $nextQuestionButton = document.querySelector(".next-question")
+const $usernameDisplay = document.querySelector(".user-name")
 
 $startGameButton.addEventListener("click", startGame)
 $nextQuestionButton.addEventListener("click", displayNextQuestion)
 
 let currentQuestionIndex = 0
-
+let userName = ""
 
 function startGame () {
+    username = prompt("Qual é o seu nome?")
+    $usernameDisplay.textContent = `Bem-vindo (a), ${username} !`
     $startGameButton.classList.add("hide")
     $questionsContainer.classList.remove("hide")
     displayNextQuestion()
@@ -59,16 +62,15 @@ function finishGame () {
     `
 }
 
-function resetQuiz() {
-    currentQuestionIndex = 0;
-    $startGameButton.classList.remove("hide");
-    $questionsContainer.classList.add("hide");
-}
-
-
 function selectAnswer(event) {
     const answerClicked = event.target
 
+    if (!answerClicked.dataset.correct){
+        resetQuiz ()
+        alert("Você errou! Tente novamente.")
+        return;
+    }
+    
     document.querySelectorAll(".answer").forEach(button =>{
         if (button.dataset.correct) {
             button.classList.add("correct")
@@ -82,6 +84,13 @@ function selectAnswer(event) {
     $nextQuestionButton.classList.remove("hide")
     currentQuestionIndex++
 }
+
+function resetQuiz() {
+    currentQuestionIndex = 0;
+    $startGameButton.classList.remove("hide")
+    $questionsContainer.classList.add("hide")
+}
+
 
 
 
@@ -123,7 +132,7 @@ const questions = [
     {
         question: " O que o Creeper Faz?",
         answers: [
-            { text: "Joga capueira", correct: false},
+            { text: "Joga capoeira", correct: false},
             { text: "Explode ", correct: true },
             { text: "Faz strofonoff (de frango)", correct: false},
             { text: "Faz pizza", correct: false}

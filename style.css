@@ -104,3 +104,58 @@
 .incorrect {
     background-color: #a10101;
 }
+
+.user-name {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background: url(./image/download.jpeg);
+    background-size: contain; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 95%; 
+        padding: 10px; 
+    }
+
+    .question {
+        font-size: 20px; 
+    }
+
+    .button {
+        font-size: 14px; 
+        padding: 0 20px; 
+    }
+
+    .user-name {
+        font-size: 16px; 
+        padding: 8px; 
+    }
+
+    .answers-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .question {
+        font-size: 18px; 
+    }
+
+    .button {
+        font-size: 12px; 
+        height: 40px; 
+    }
+
+    .user-name {
+        font-size: 14px; 
+    }
+}
