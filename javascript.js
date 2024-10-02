@@ -158,10 +158,10 @@ const questions = [
     {
         question: "Qual dos itens abaixo é comestível porém causa muito dano?",
         answers: [
-            {text: "baiacu", correct: false},
+            {text: "baiacu", correct: true},
             {text: "carne de zumbi", correct: false},
             {text: "frango cru", correct: false},
-            {text: "batata envenenada", correct: true}
+            {text: "batata envenenada", correct: false}
         ]
 
     },
