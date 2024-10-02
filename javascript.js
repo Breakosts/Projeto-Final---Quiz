@@ -104,6 +104,8 @@ function nullPrompt() {
     currentQuestionIndex = 0;  
 }
 
+/*fix*/
+
 
 
 
