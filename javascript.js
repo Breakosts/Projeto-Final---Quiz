@@ -14,6 +14,10 @@ let userName = ""
 
 function startGame () {
     username = prompt("Qual é o seu nome?")
+    if (username == null) {
+        nullPrompt()
+        return
+    }
     $usernameDisplay.textContent = `Bem-vindo (a), ${username} !`
     $usernameDisplay.classList.remove("hide")
     $startGameButton.classList.add("hide")
@@ -26,7 +30,8 @@ function displayNextQuestion() {
     resetState()
     
     if (currentQuestionIndex === questions.length) {
-        return finishGame ()
+        finishGame ()
+        return
     }
 
     $questionText.textContent = questions[currentQuestionIndex].question
@@ -93,6 +98,13 @@ function resetQuiz() {
     $questionsContainer.classList.add("hide")
     $usernameDisplay.classList.add("hide")
 }
+
+function nullPrompt() {
+    alert("Por favor, Insira seu nome!")
+    currentQuestionIndex = 0;  
+}
+
+
 
 
 
